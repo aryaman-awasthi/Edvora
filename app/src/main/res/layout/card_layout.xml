@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="8dp"
+    android:layout_margin="15dp"
+    app:cardCornerRadius="10sp"
+    app:cardBackgroundColor="@color/card_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="25sp">
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            app:shapeAppearanceOverlay="@style/roundImageView"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:background="@drawable/rounded_background"
+                android:orientation="horizontal"
+                android:padding="10sp">
+
+                <TextView
+                    android:id="@+id/cityName"
+                    style="@style/textPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10sp"
+                android:background="@drawable/rounded_background"
+                android:orientation="horizontal"
+                android:layout_alignParentEnd="true">
+                <TextView
+                    android:id="@+id/stateName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/textPrimary"
+                    android:textSize="15sp"
+                    android:text="@string/app_name" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/card_secondary_margin_top"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/textSecondary"
+                android:textSize="@dimen/form_text_size"
+                android:text="@string/ride_id"/>
+            <TextView
+                android:id="@+id/rideId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/textPrimary"
+                android:textSize="@dimen/form_text_size"
+                android:text="@string/ride_id"
+                android:layout_marginStart="10sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/card_secondary_margin_top"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/textSecondary"
+                android:textSize="@dimen/form_text_size"
+                android:text="@string/origin_station"/>
+            <TextView
+                android:id="@+id/origin_station"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/textPrimary"
+                android:textSize="@dimen/form_text_size"
+                android:text="@string/ride_id"
+                android:layout_marginStart="10sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/card_secondary_margin_top"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/textSecondary"
+                android:textSize="@dimen/form_text_size"
+                android:text="@string/station_path"/>
+            <TextView
+                android:id="@+id/station_path"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/textPrimary"
+                android:textSize="@dimen/form_text_size"
+                android:text="@string/ride_id"
+                android:layout_marginStart="10sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/card_secondary_margin_top"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/textSecondary"
+                android:textSize="@dimen/form_text_size"
+                android:text="@string/date"/>
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/textPrimary"
+                android:textSize="@dimen/form_text_size"
+                android:text="@string/ride_id"
+                android:layout_marginStart="10sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/card_secondary_margin_top"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/textSecondary"
+                android:textSize="@dimen/form_text_size"
+                android:text="@string/distance"/>
+            <TextView
+                android:id="@+id/distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/textPrimary"
+                android:textSize="@dimen/form_text_size"
+                android:text="@string/ride_id"
+                android:layout_marginStart="10sp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
