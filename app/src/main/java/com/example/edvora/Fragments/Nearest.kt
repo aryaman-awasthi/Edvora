@@ -10,9 +10,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.edvora.Adaptors.DataAdapter
 import com.example.edvora.Api.RideApiInterface
 import com.example.edvora.ModelClasses.DataModel
+import com.example.edvora.ModelClasses.User
 import com.example.edvora.R
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import kotlin.math.abs
 
 const val BASE_URL = "https://assessment.api.vweb.app/"
 class Nearest : Fragment() {
@@ -47,7 +49,16 @@ class Nearest : Fragment() {
 
             override fun onResponse(call: retrofit2.Call<List<DataModel>>, response: retrofit2.Response<List<DataModel>>) {
                 println("Success")
-                val responseBody = response.body()!!
+                val responseBody = response.body()!!.sortedBy {
+                    var x = Int.MAX_VALUE
+                    for (y: Int in it.station_path){
+                        var z = abs(40 - y)
+                        if (z < x)
+                            x = z
+                    }
+                    x
+                }
+
 
                 recyclerView = view.findViewById(R.id.recycler_view)
                 recyclerView.setHasFixedSize(true)
